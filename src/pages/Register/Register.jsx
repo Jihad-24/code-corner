@@ -9,7 +9,7 @@ import Swal from "sweetalert2";
 
 const Register = () => {
 
-    const { createUser } = useContext(AuthContext);
+    const { createUser, signInGoogle } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -70,6 +70,28 @@ const Register = () => {
             })
     }
 
+    const handleGoogleSignIn = () => {
+        signInGoogle()
+            .then(result => {
+                // console.log(result.user)
+                // success alert
+                Swal.fire({
+                    icon: 'success',
+                    title: 'User Login Successfull'
+                })
+                // navigate after login
+                navigate(location?.state ? location.state : "/");
+            })
+            .catch(error => {
+                // error alert
+                Swal.fire({
+                    icon: 'error',
+                    title: `${error.message}`
+                })
+            })
+    }
+
+
     return (
         <div className="mb-16">
             <NavBar></NavBar>
@@ -126,6 +148,7 @@ const Register = () => {
                     <div className="form-control mt-4">
                         <button className="btn btn-primary">Register</button>
                     </div>
+                    <button onClick={handleGoogleSignIn} className="btn btn-neutral">Login With Google</button>
                 </form>
                 <p className="text-center text-[#706F6F] font-medium">Already Have An Account ?
                     <Link to={"/login"} className="text-[#F75B5F] font-bold">  Login Now!</Link> </p>

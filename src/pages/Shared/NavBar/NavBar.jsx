@@ -20,8 +20,8 @@ const NavBar = () => {
     }
 
     const loggedOut = () => {
-         // success alert
-         Swal.fire({
+        // success alert
+        Swal.fire({
             icon: 'success',
             title: 'User LogOut Successfull'
         })
@@ -54,7 +54,11 @@ const NavBar = () => {
                 <div className="navbar-end">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
-                            <img src={user ? user?.photoURL : {userDefaultPic}} />
+                            {
+                                !user ? <img src={userDefaultPic} alt="" />
+                                    :
+                                    <img src={user?.photoURL} alt="" />
+                            }
                         </div>
 
                     </label>

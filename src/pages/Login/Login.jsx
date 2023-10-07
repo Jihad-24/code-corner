@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import NavBar from "../Shared/NavBar/NavBar";
 import { useContext, useState } from "react";
@@ -7,12 +8,12 @@ import Swal from "sweetalert2";
 
 const Login = () => {
 
-    const { signIn ,signInGoogle} = useContext(AuthContext);
+    const { signIn, signInGoogle } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     const [loginError, setLoginError] = useState('');
     const [showPassword, setShowPassword] = useState(false);
-    console.log('login location', location);
+    // console.log('login location', location);
 
     const handleLogin = e => {
         e.preventDefault();
@@ -25,7 +26,7 @@ const Login = () => {
         // login user
         signIn(email, password)
             .then(result => {
-                console.log(result.user);
+                // console.log(result.user);
                 // success alert
                 Swal.fire({
                     icon: 'success',
@@ -47,12 +48,14 @@ const Login = () => {
     const handleGoogleSignIn = () => {
         signInGoogle()
             .then(result => {
-                console.log(result.user)
+                // console.log(result.user)
                 // success alert
                 Swal.fire({
                     icon: 'success',
                     title: 'User Login Successfull'
                 })
+                // navigate after login
+                navigate(location?.state ? location.state : "/");
             })
             .catch(error => {
                 // error alert
@@ -110,12 +113,12 @@ const Login = () => {
                         <button className="btn btn-primary">Login</button>
 
                     </div>
+                    <button onClick={handleGoogleSignIn} className="btn btn-neutral">Login With Google</button>
+
                 </form>
                 <p className="text-center text-[#706F6F] font-medium">Don’t Have An Account ?
                     <Link to={"/register"} className="text-[#F75B5F] font-bold"> Register</Link> </p>
-
             </div>
-            <button onClick={handleGoogleSignIn} className="btn btn-primary">Google</button>
         </div>
     );
 };
