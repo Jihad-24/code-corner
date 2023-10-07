@@ -31,6 +31,10 @@ const NavBar = () => {
         <li className="font-semibold"><NavLink to={"/"}>Home</NavLink></li>
         <li className="font-semibold"><NavLink to={"/login"}>Login</NavLink></li>
         <li className="font-semibold"><NavLink to={"/register"}>Register</NavLink></li>
+        {user && <>
+            <li><NavLink to="/profile">Profile</NavLink></li>
+            <li><NavLink to="/dashboard">Dashboard</NavLink></li>
+        </>}
     </>
     return (
         <div>
@@ -54,16 +58,20 @@ const NavBar = () => {
                 <div className="navbar-end">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
-                            {
-                                !user ? <img src={userDefaultPic} alt="" />
-                                    :
-                                    <img src={user?.photoURL} alt="" />
-                            }
+                            <Link to={"/profile"}>
+                                {
+                                    !user ? <img src={userDefaultPic} alt="" />
+                                        :
+                                        <img src={user?.photoURL} alt="" />
+                                }
+                            </Link>
                         </div>
 
                     </label>
                     <div>
-                        <p className="px-1 font-medium">{user && user?.displayName}</p>
+                        <Link to={"/profile"}>
+                            <p className="px-1 font-medium">{user && user?.displayName}</p>
+                        </Link>
                     </div>
                     {
                         user ?

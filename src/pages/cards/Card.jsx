@@ -1,11 +1,14 @@
 /* eslint-disable no-unused-vars */
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import NavBar from "../Shared/NavBar/NavBar";
 import Swal from "sweetalert2";
 
 const Card = () => {
 
-    const { title, description, price, image, details } = useParams();
+    const { id } = useParams();
+
+    const location = useLocation();
+    const { title, description, _id, image, price,details  } = location.state;
 
     const handlApply = () => {
         // success alert
@@ -25,9 +28,9 @@ const Card = () => {
                     </figure>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title text-3xl">{title}</h2>
-                        <p className="px-16 leading-8 font-medium">{details}</p>
+                        <p className="px-16 leading-8 font-medium">{ details}</p>
                         <div className="">
-                            <button className="btn text-xl">Course Price : ${price}</button>
+                            <button className="btn text-xl">Course Price : ${ price}</button>
                         </div>
                         <div className="card-actions mt-8 flex">
                             <button onClick={handlApply} className="btn btn-primary">Apply Course</button>
