@@ -1,6 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
 import { useContext } from "react";
+import userDefaultPic from '../../../assets/user.png'
 import { AuthContext } from "../../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const NavBar = () => {
 
@@ -13,14 +15,22 @@ const NavBar = () => {
                 console.log(result.user);
             })
             .catch(error => {
-                console.error(error.message);
+                console.log(error.message);
             })
+    }
+
+    const loggedOut = () => {
+         // success alert
+         Swal.fire({
+            icon: 'success',
+            title: 'User LogOut Successfull'
+        })
     }
 
     const navLinks = <>
         <li className="font-semibold"><NavLink to={"/"}>Home</NavLink></li>
-        <li className="font-semibold"><NavLink to={"/about"}>About</NavLink></li>
-        <li className="font-semibold"><NavLink to={"/career"}>Career</NavLink></li>
+        <li className="font-semibold"><NavLink to={"/login"}>Login</NavLink></li>
+        <li className="font-semibold"><NavLink to={"/register"}>Register</NavLink></li>
     </>
     return (
         <div>
@@ -44,7 +54,7 @@ const NavBar = () => {
                 <div className="navbar-end">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
-                            <img src={user && user?.photoURL} />
+                            <img src={user ? user?.photoURL : {userDefaultPic}} />
                         </div>
 
                     </label>
@@ -53,7 +63,7 @@ const NavBar = () => {
                     </div>
                     {
                         user ?
-                            <button onClick={handleSignOut} className="btn bg-[#403F3F] text-white">Sign Out</button>
+                            <button onClick={() => { handleSignOut(); loggedOut(); }} className="btn bg-[#403F3F] text-white" >Sign Out</button>
                             :
                             <Link to={"/login"}>
                                 <button className="btn bg-[#403F3F] text-white">Login</button>

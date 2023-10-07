@@ -1,10 +1,19 @@
+/* eslint-disable no-unused-vars */
 import { Link, useParams } from "react-router-dom";
 import NavBar from "../Shared/NavBar/NavBar";
+import Swal from "sweetalert2";
 
 const Card = () => {
 
     const { title, description, price, image, details } = useParams();
 
+    const handlApply = () => {
+        // success alert
+        Swal.fire({
+            icon: 'success',
+            title: 'Applying Successfull'
+        })
+    }
 
     return (
         <div>
@@ -18,10 +27,10 @@ const Card = () => {
                         <h2 className="card-title text-3xl">{title}</h2>
                         <p className="px-16 leading-8 font-medium">{details}</p>
                         <div className="">
-                            
+                            <button className="btn text-xl">Course Price : ${price}</button>
                         </div>
                         <div className="card-actions mt-8 flex">
-                            <button className="btn btn-primary">Apply Course</button>
+                            <button onClick={handlApply} className="btn btn-primary">Apply Course</button>
                             <Link to={"/"}><button className="btn btn-primary">Go Home</button></Link>
                         </div>
                     </div>

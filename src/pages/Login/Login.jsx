@@ -48,9 +48,18 @@ const Login = () => {
         signInGoogle()
             .then(result => {
                 console.log(result.user)
+                // success alert
+                Swal.fire({
+                    icon: 'success',
+                    title: 'User Login Successfull'
+                })
             })
             .catch(error => {
-                console.error(error)
+                // error alert
+                Swal.fire({
+                    icon: 'error',
+                    title: `${error.message}`
+                })
             })
     }
 
