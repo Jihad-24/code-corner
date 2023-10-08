@@ -5,7 +5,7 @@ import userDefaultPic from '../../assets/user.png'
 import React, { useContext } from 'react';
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 
-const Profile = () => {
+const UserProfile = () => {
 
     const { user } = useContext(AuthContext);
     // console.log(user);
@@ -56,4 +56,4 @@ const Profile = () => {
     );
 };
 
-export default Profile;
+export default UserProfile;

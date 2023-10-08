@@ -1,8 +1,11 @@
 /* eslint-disable react/prop-types */
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 
 const ServiceCard = ({ card }) => {
+    const { user } = useContext(AuthContext);
 
     const { title, description, _id, image, price, details } = card;
 

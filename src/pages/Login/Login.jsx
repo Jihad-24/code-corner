@@ -65,6 +65,7 @@ const Login = () => {
                 })
             })
     }
+    console.log(location);
 
     return (
         <div>

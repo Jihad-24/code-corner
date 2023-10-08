@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { useContext } from "react";
 import userDefaultPic from '../../../assets/user.png'
 import { AuthContext } from "../../../providers/AuthProvider";
+import icon from "../../../assets/react.svg"
 import Swal from "sweetalert2";
 
 const NavBar = () => {
@@ -29,10 +30,15 @@ const NavBar = () => {
 
     const navLinks = <>
         <li className="font-semibold"><NavLink to={"/"}>Home</NavLink></li>
-        <li className="font-semibold"><NavLink to={"/login"}>Login</NavLink></li>
-        <li className="font-semibold"><NavLink to={"/register"}>Register</NavLink></li>
+        
+         <li className="font-semibold"><NavLink to={"/login"}>Login</NavLink></li>
+       
+        {
+            !user && <li className="font-semibold"><NavLink to={"/register"}>Register</NavLink></li>
+        }
         {user && <>
-            <li className="font-semibold"><NavLink to="/profile">Profile</NavLink></li>
+            <li className="font-semibold"><NavLink to="/user">User</NavLink></li>
+            <li className="font-semibold"><NavLink to="/ourfullteam">Our Team</NavLink></li>
             <li className="font-semibold"><NavLink to="/dashboard">Dashboard</NavLink></li>
         </>}
     </>
@@ -48,7 +54,12 @@ const NavBar = () => {
                             {navLinks}
                         </ul>
                     </div>
-
+                    <Link to={"/"}>
+                        <div className="hidden md:flex md:items-center md:gap-2">
+                            <img src={icon} alt="" />
+                            <p className=" md:font-semibold md:text-2xl">Code Corner</p>
+                        </div>
+                    </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">

@@ -6,13 +6,14 @@ import Register from "../pages/Register/Register";
 import Card from "../pages/cards/Card";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
-import Profile from "../pages/Profile/Profile";
+import UserProfile from "../pages/UserProfile/UserProfile";
+import OurFullTeam from "../OurFullTeam/OurFullTeam";
 
 const routes = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    errorElement:<ErrorPage></ErrorPage>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -22,7 +23,7 @@ const routes = createBrowserRouter([
       {
         path: "/card/:id",
         element: <PrivateRoute><Card /></PrivateRoute>
-      },      
+      },
       {
         path: "/login",
         element: <Login></Login>
@@ -32,8 +33,12 @@ const routes = createBrowserRouter([
         element: <Register></Register>
       },
       {
-        path: "/profile",
-        element:<Profile></Profile>
+        path: "/user",
+        element: <UserProfile></UserProfile>
+      },
+      {
+        path: "/ourfullteam",
+        element: <OurFullTeam></OurFullTeam>
       }
 
     ]

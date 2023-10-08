@@ -90,7 +90,7 @@ const Register = () => {
                 })
             })
     }
-
+console.log(navigate);
 
     return (
         <div className="mb-16">

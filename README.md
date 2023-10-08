@@ -1,8 +1,22 @@
-# React + Vite
+# Code Corner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Click here for the live page: [https://classroom.github.com/a/ehOGNGkI]
 
-Currently, two official plugins are available:
+Based on the provided code for your website, here are five different features and functionalities:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 1. User Authentication:
+   - My website supports user authentication through email and password, as well as Google Sign-In. Users can create accounts, log in, and log out.
+
+# 2. Navigation and Routing:
+   - The website uses React Router for navigation and routing. It defines routes for different pages, such as the home page, login page, register page, user profile, and more.
+
+# 3. Password Visibility Toggle:
+   - In the login and registration forms, there is an option for users to toggle the visibility of the password by clicking the eye icon, allowing them to see the password they are entering.
+
+# 4. Error Handling and Alerts:
+   - The website handles errors during the login and registration processes and displays error messages to the user. It also provides success alerts using the Swal (SweetAlert2) library.
+
+# 5. Navigation Bar (Navbar):
+   - The website includes a navigation bar that displays links to different pages based on the user's authentication status. It provides links for Home, Login, Register, User Profile, and Our Team. It also displays the user's name and profile picture when logged in and provides a "Sign Out" button for logging out.
+
+These are the key features and functionalities of my website.

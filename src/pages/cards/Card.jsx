@@ -8,7 +8,10 @@ const Card = () => {
     const { id } = useParams();
 
     const location = useLocation();
-    const { title, description, _id, image, price,details  } = location.state;
+    const { title, image, price, details } = location.state || {};
+    
+    console.log(title, price,);
+    console.log(location);
 
     const handlApply = () => {
         // success alert

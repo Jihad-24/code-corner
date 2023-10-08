@@ -1,7 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import icon from "../assets/react.svg"
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaPeriscope } from 'react-icons/fa';
+import { AiOutlinePhone } from 'react-icons/ai';
+import { MdOutlineWatchLater } from 'react-icons/md';
 
 const Footer = () => {
     return (
@@ -10,23 +12,35 @@ const Footer = () => {
                 <aside>
                     <img src={icon} alt="" />
                     <p>Code Corner Ltd.<br />Code Corner is dedicated to constant learning & knowledge <br /> sharing  in Providing reliable learning enviroment.</p>
+                    <a href="#" className='flex gap-2 items-center py-1  hover:text-sky-500'>
+                        <FaPeriscope className='text-xl'></FaPeriscope>
+                        <p className='text-[16px]'>457 Mott Street, NY 10013</p>
+                    </a>
+                    <a href="#" className='flex gap-2 items-center  hover:text-sky-500'>
+                        <AiOutlinePhone className='text-xl'></AiOutlinePhone>
+                        <p className='text-[16px]'>+44 300 303 0266</p>
+                    </a>
+                    <a href="#" className='flex gap-2 items-center pt-1  hover:text-sky-500'>
+                        <MdOutlineWatchLater className='text-xl'></MdOutlineWatchLater>
+                        <p className='text-[16px]'>Mon-Sat 8.00-18.00</p>
+                    </a>
                 </aside>
                 <nav>
-                    <header className="text-xl text-[#c8c7c7] font-bold">Services</header>
+                    <header className="text-xl text-[#c8c7c7] font-bold py-1  hover:text-sky-500">Services</header>
                     <a className="link link-hover hover:text-sky-500">Software Engineering</a>
-                    <a className="link link-hover hover:text-sky-500">Programming</a>
+                    <a className="link link-hover hover:text-sky-500 py-1">Programming</a>
                     <a className="link link-hover hover:text-sky-500">C++ for DSA</a>
-                    <a className="link link-hover hover:text-sky-500">Problem-Solving Part</a>
+                    <a className="link link-hover hover:text-sky-500 py-1">Problem-Solving Part</a>
                 </nav>
                 <nav>
-                    <header className="text-xl text-[#c8c7c7] font-bold">Company</header>
+                    <header className="text-xl text-[#c8c7c7] font-bold py-1  hover:text-sky-500">Company</header>
                     <a className="link link-hover hover:text-sky-500">About us</a>
-                    <a className="link link-hover hover:text-sky-500">Contact</a>
+                    <a className="link link-hover hover:text-sky-500 py-1">Contact</a>
                     <a className="link link-hover hover:text-sky-500">Jobs</a>
-                    <a className="link link-hover hover:text-sky-500">Press kit</a>
+                    <a className="link link-hover hover:text-sky-500 py-1">Press kit</a>
                 </nav>
                 <nav>
-                    <header className="text-xl text-[#c8c7c7] font-bold">Code Corner</header>
+                    <header className="text-xl text-[#c8c7c7] font-bold py-1  hover:text-sky-500">Code Corner</header>
                     <img src="https://i.ibb.co/MGY1PC3/footer-map-img.png" alt="" />
                 </nav>
             </div>
@@ -36,7 +50,7 @@ const Footer = () => {
                     <p>Copyright © 2023 -Qode Interactive, All Rights Reserved By Code Corner.
                     </p>
                 </aside>
-                <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+                <nav className="grid-flow-col gap-4 place-self-center md:place-self-center md:justify-self-end">
                     <a
                         href="#facebook"
                         className="block text-xl"
