@@ -41,7 +41,7 @@ const Profile = () => {
                             href="#twitter"
                             className="block text-xl text-[#58A7DE]"
                         >
-                           <FaTwitter></FaTwitter>
+                            <FaTwitter></FaTwitter>
                         </a>
                         <a
                             href="#instagram"
