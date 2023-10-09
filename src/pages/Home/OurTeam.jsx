@@ -22,7 +22,7 @@ const OurTeam = () => {
             {
                 error && <p className="text-2xl text-red-600">{error}</p>
             }
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center" data-aos="fade-up">
                 {
                     fullTeam ? profiles.map(profile => <TeamProfiles key={profile.id} profile={profile}></TeamProfiles>)
                         :
@@ -30,7 +30,7 @@ const OurTeam = () => {
                 }
             </div>
             {
-                profiles.length > 3 ? <button className='btn btn-neutral block mt-10 mx-auto' onClick={() => setFullteam(!fullTeam)}>{fullTeam ? 'See Less' : 'See More'}</button>
+                profiles.length > 3 ? <button data-aos="fade-up" className='btn btn-neutral block mt-10 mx-auto' onClick={() => setFullteam(!fullTeam)}>{fullTeam ? 'See Less' : 'See More'}</button>
                     : ''
             }
         </div>

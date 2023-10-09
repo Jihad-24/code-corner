@@ -28,7 +28,7 @@ const OurFullTeam = () => {
                 }
                   
             </div>
-            <Link to={"/"}> <button className='btn btn-neutral block mx-auto mt-10'>Go Back Home</button></Link>
+            <Link to={"/"}> <button className='btn btn-neutral block mx-auto mt-10' data-aos="fade-up">Go Back Home</button></Link>
           
         </div>
     );

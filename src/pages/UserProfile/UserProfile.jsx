@@ -14,7 +14,7 @@ const UserProfile = () => {
         <div>
             <NavBar></NavBar>
             <div className="">
-                <div className="relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md mx-auto">
+                <div className="relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md mx-auto" data-aos="fade-up">
                     <div className="relative mx-4 mt-4 h-80 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
                         {
                             !user ? <img className=" w-full" src={userDefaultPic} alt="" />

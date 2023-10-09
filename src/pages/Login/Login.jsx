@@ -70,15 +70,15 @@ const Login = () => {
     return (
         <div>
             <NavBar></NavBar>
-            <div className="">
-                <h1 className="text-4xl mt-10 font-bold text-center">Login your account!</h1>
+            <div >
+                <h1 className="text-4xl mt-10 font-bold text-center" data-aos="fade-down">Login your account!</h1>
                 <form
                     onSubmit={handleLogin}
                     className="card-body md:w-3/4 lg:w-1/2 mx-auto">
                     {
                         loginError && <p className="text-red-700">{loginError}</p>
                     }
-                    <div className="form-control ">
+                    <div className="form-control " data-aos="fade-right">
                         <label className="label">
                             <span className="label-text">Email Address</span>
                         </label>
@@ -88,7 +88,7 @@ const Login = () => {
                             placeholder="Enter Your Email Address"
                             className="input input-bordered bg-slate-200" required />
                     </div>
-                    <div className="form-control relative">
+                    <div className="form-control relative" data-aos="fade-left">
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
@@ -109,14 +109,14 @@ const Login = () => {
                                 Forgot password?</a>
                         </label>
                     </div>
-                    <div className="form-control mt-4">
+                    <div className="form-control mt-4" >
 
-                        <button className="btn btn-primary">Login</button>
+                        <button  className="btn btn-primary">Login</button>
 
                     </div>
 
                 </form>
-                <div className="card-body md:w-3/4 lg:w-1/2 mx-auto">
+                <div className="card-body md:w-3/4 lg:w-1/2 mx-auto" >
 
                     <button onClick={handleGoogleSignIn} className="btn btn-neutral">Login With Google</button>
                 </div>

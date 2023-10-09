@@ -96,7 +96,7 @@ const Register = () => {
         <div className="mb-16">
             <NavBar></NavBar>
             <div className="">
-                <h1 className="text-4xl mt-10 font-bold text-center">Register your account!</h1>
+                <h1 className="text-4xl mt-10 font-bold text-center" data-aos="fade-down">Register your account!</h1>
                 <form
                     onSubmit={handleRegister}
                     className="card-body md:w-3/4 lg:w-1/2 mx-auto">
@@ -106,7 +106,7 @@ const Register = () => {
                     {
                         success && <p className="text-green-700">{success}</p>
                     }
-                    <div className="form-control ">
+                    <div className="form-control " data-aos="fade-left">
                         <label className="label">
                             <span className="label-text">Your Name</span>
                         </label>
@@ -116,7 +116,7 @@ const Register = () => {
                             placeholder="Enter your name"
                             className="input input-bordered bg-slate-200" required />
                     </div>
-                    <div className="form-control ">
+                    <div className="form-control " data-aos="fade-right">
                         <label className="label">
                             <span className="label-text">Email Address</span>
                         </label>
@@ -126,7 +126,7 @@ const Register = () => {
                             placeholder="Enter Your Email Address"
                             className="input input-bordered bg-slate-200" required />
                     </div>
-                    <div className="form-control relative">
+                    <div className="form-control relative" data-aos="fade-left">
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
@@ -141,7 +141,7 @@ const Register = () => {
                             }
                         </span>
                     </div>
-                    <div className="flex">
+                    <div className="flex" >
                         <input type="checkbox" name="terms" id="terms" />
                         <label htmlFor="terms"><a href="#">Acceept our Terms and Condition</a></label>
                     </div>
@@ -150,7 +150,7 @@ const Register = () => {
                     </div>
 
                 </form>
-                <div className="card-body md:w-3/4 lg:w-1/2 mx-auto">
+                <div className="card-body md:w-3/4 lg:w-1/2 mx-auto" data-aos="fade-up">
 
                     <button onClick={handleGoogleSignIn} className="btn btn-neutral">Login With Google</button>
                 </div>
