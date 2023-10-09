@@ -30,9 +30,10 @@ const NavBar = () => {
 
     const navLinks = <>
         <li className="font-semibold"><NavLink to={"/"}>Home</NavLink></li>
-        
-         <li className="font-semibold"><NavLink to={"/login"}>Login</NavLink></li>
-       
+
+        {
+            !user && <li className="font-semibold"><NavLink to={"/login"}>Login</NavLink></li>
+        }
         {
             !user && <li className="font-semibold"><NavLink to={"/register"}>Register</NavLink></li>
         }

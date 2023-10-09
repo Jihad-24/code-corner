@@ -40,11 +40,11 @@ const Card = () => {
                     </figure>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title text-3xl">{cardData?.title}</h2>
-                        <p className="px-16 leading-8 font-medium">{cardData?.details}</p>
-                        <div className="">
+                        <p className="md:px-16 text-left md:text-center leading-8 font-medium">{cardData?.details}</p>
+                        <div className="text-center">
                             <button className="btn text-xl">Course Price : ${cardData?.price}</button>
                         </div>
-                        <div className="card-actions mt-8 flex">
+                        <div className="card-actions mt-8 flex justify-center">
                             <button onClick={handlApply} className="btn btn-primary">Apply Course</button>
                             <Link to={"/"}><button className="btn btn-primary">Go Home</button></Link>
                         </div>

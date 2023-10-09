@@ -1,6 +1,6 @@
 # Code Corner
 
-Click here for the live page: [https://classroom.github.com/a/ehOGNGkI]
+Click here for the live page: [https://code-corner-j.netlify.app/]
 
 Here are at least five bullet points mentioning different features and functionalities of my website:
 

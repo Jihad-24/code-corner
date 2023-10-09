@@ -90,7 +90,7 @@ const Register = () => {
                 })
             })
     }
-console.log(navigate);
+    console.log(navigate);
 
     return (
         <div className="mb-16">
@@ -148,8 +148,12 @@ console.log(navigate);
                     <div className="form-control mt-4">
                         <button className="btn btn-primary">Register</button>
                     </div>
-                    <button onClick={handleGoogleSignIn} className="btn btn-neutral">Login With Google</button>
+
                 </form>
+                <div className="card-body md:w-3/4 lg:w-1/2 mx-auto">
+
+                    <button onClick={handleGoogleSignIn} className="btn btn-neutral">Login With Google</button>
+                </div>
                 <p className="text-center text-[#706F6F] font-medium">Already Have An Account ?
                     <Link to={"/login"} className="text-[#F75B5F] font-bold">  Login Now!</Link> </p>
 
