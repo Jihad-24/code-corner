@@ -114,9 +114,12 @@ const Login = () => {
                         <button className="btn btn-primary">Login</button>
 
                     </div>
-                    <button onClick={handleGoogleSignIn} className="btn btn-neutral">Login With Google</button>
 
                 </form>
+                <div className="card-body md:w-3/4 lg:w-1/2 mx-auto">
+
+                    <button onClick={handleGoogleSignIn} className="btn btn-neutral">Login With Google</button>
+                </div>
                 <p className="text-center text-[#706F6F] font-medium">Don’t Have An Account ?
                     <Link to={"/register"} className="text-[#F75B5F] font-bold"> Register</Link> </p>
             </div>
