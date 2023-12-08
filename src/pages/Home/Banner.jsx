@@ -6,7 +6,7 @@ const Banner = () => {
         <div className=''>
             <div className="carousel w-full">
                 <div id="slide1" className="carousel-item relative w-full">
-                    <img data-aos="fade-down-right" className="h-[90vh] w-full rounded-2xl" src="https://i.ibb.co/BrcCJjr/brooke-cagle-g1-Kr4-Ozfoac-unsplash.jpg" />
+                    <img data-aos="fade-down-right" className=" lg:h-[90vh] w-full rounded-2xl" src="https://i.ibb.co/BrcCJjr/brooke-cagle-g1-Kr4-Ozfoac-unsplash.jpg" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide4" className="btn btn-circle">❮</a>
                         <a href="#slide2" className="btn btn-circle">❯</a>

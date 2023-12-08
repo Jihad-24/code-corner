@@ -1,4 +1,4 @@
-# Code Corner
+# Learning Point
 
 Click here for the live page: [https://code-corner-j.netlify.app/]
 

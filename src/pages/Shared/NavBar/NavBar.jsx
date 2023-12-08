@@ -58,7 +58,7 @@ const NavBar = () => {
                     <Link to={"/"}>
                         <div className="hidden md:flex md:items-center md:gap-2">
                             <img src={icon} alt="" />
-                            <p className=" md:font-semibold md:text-2xl">Code Corner</p>
+                            <p className=" md:font-semibold md:text-2xl">Learning Point</p>
                         </div>
                     </Link>
                 </div>
@@ -70,13 +70,13 @@ const NavBar = () => {
                 <div className="navbar-end">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
-                          
-                                {
-                                    !user ? <img src={userDefaultPic} alt="" />
-                                        :
-                                        <img src={user?.photoURL} alt="" />
-                                }
-                           
+
+                            {
+                                !user ? <img src={userDefaultPic} alt="" />
+                                    :
+                                    <img src={user?.photoURL} alt="" />
+                            }
+
                         </div>
 
                     </label>
