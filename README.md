@@ -1,6 +1,6 @@
 # Learning Point
 
-Click here for the live page: [https://code-corner-j.netlify.app/]
+Click here for the live page: [https://learning-point-j.netlify.app/]
 
 Here are at least five bullet points mentioning different features and functionalities of my website:
 
